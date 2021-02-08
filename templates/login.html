@@ -2,15 +2,15 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="center-align">Register</h3>
+    <h3 class="center-align">Log In</h3>
 
     <div class="row">
-        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
             <div class="card-panel">
                 <!-- username -->
                 <div class="row">
 					<div class="input-field col s12">
-						<i class="fas fa-user-tag prefix purple-text lighten-2"></i>
+						<i class="fas fa-id-card-alt prefix purple-text lighten-2"></i>
                         <input id="username" name="username" type="text" minlength="3"
                          maxlength="20" class="validate" pattern="^[a-zA-Z0-9]{3,15}$" required>
 						<label for="username">Username</label>
@@ -27,8 +27,8 @@
                 </div>
                 <!-- register -->
                 <div class="row">
-                    <button type="submit" class="col s12 btn-large purple lighten-2 text-shadow">
-                        Register <i class="fas fa-sign-in-alt"></i>
+                    <button type="submit" class="col s12 btn-large purple lighten-2">
+                        Log in <i class="fas fa-sign-in-alt"></i>
                     </button>
                 </div>
             </div>
@@ -38,8 +38,8 @@
     <div class="row">
         <div class="col s12">
             <p class="center-align">
-                Already have an Account?
-                <a href="{{ url_for('login') }}" >Log In</a>
+                Haven't got an Account?
+                <a href="{{ url_for('register') }}">Register Account</a>
             </p>
         </div>
     </div>

@@ -76,6 +76,14 @@ def login():
     return render_template("login.html")
 
 
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    # gets the user's name
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    return render_template("profile.html", username=username)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

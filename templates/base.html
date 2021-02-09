@@ -17,13 +17,13 @@
 
         <nav class="purple lighten-2">
             <div class="nav-wrapper">
-            <a href="{{ url_for('get_reviews') }}" class="brand-logo">Movie Club</a>
+            <a href="{{ url_for('get_reviews') }}" class="brand-logo">Film Club</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-expand"></i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('get_reviews') }}">Reviews</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                <li><a href="collapsible.html">Submit Review</a></li>
+                <li><a href="{{ url_for('add_review') }}">Submit Review</a></li>
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
                 <li><a href="{{ url_for('login') }}">Log In</a></li>
@@ -38,7 +38,7 @@
                 <li><a href="{{ url_for('get_reviews') }}">Reviews</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                <li><a href="collapsible.html">Submit Review</a></li>
+                <li><a href="{{ url_for('add_review') }}">Submit Review</a></li>
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
                 <li><a href="{{ url_for('login') }}">Log In</a></li>

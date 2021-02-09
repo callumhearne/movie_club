@@ -4,41 +4,53 @@
     <h3 class="purple-text lighten-2 center">Create Review</h3>
 
     <div class="row card-panel">
-        <form class="col s12" method="POST" action="">
+        <form class="col s12" method="POST" action="{{ url_for('add_review') }}">
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-film prefix purple-text lighten-2"></i>
-                    <input id="film_name" name="film_name" type="text" class="validate">
-                    <label for="film_name">Film Name</label>
+                    <input id="movie_name" name="movie_name" type="text" class="validate">
+                    <label for="movie_name">Film Name</label>
                 </div>
             </div>
             <div class="row">
-                <div class="input-field col s12">
+                <div class="input-field col s12 center-alignment">
                     <i class="fas fa-sort-amount-down-alt prefix purple-text lighten-2"></i>
-                    <input id="genre_name" name="film_name" type="tel" class="validate">
-                    <label for="genre_name">Genre</label>
+                        <select id="genre_name" name="genre_name" class="validate" required>
+                            <option value="" disabled selected>Choose Genre</option>
+                            {% for genre in genres %}
+                            <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
+                            {% endfor %}
+                        </select>
+                    <label for="genre_name">Film Genre</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-edit prefix purple-text lighten-2"></i>
-                    <textarea id="film_review" name="film_review" minlength="5"
+                    <textarea id="movie_review" name="movie_review" minlength="5"
                         maxlength="500" class="materialize-textarea validate" required></textarea>
-                    <label for="film_review">Enter review here!</label>
+                    <label for="movie_review">Enter review here!</label>
                 </div>
             </div>
             <div class="row">
-                <div class="input-field col s12 center-alignment">
-                        <select>
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="1">*</option>
-                            <option value="2">**</option>
-                            <option value="3">***</option>
-                            <option value="4">****</option>
-                            <option value="5">*****</option>
+                <div class="input-field col s12">
+                    <i class="fas fa-star prefix purple-text lighten-2"></i>
+                         <select id="movie_rating" name="movie_rating" class="validate" required>
+                            <option value="" disabled selected>Choose your Rating</option>
+                            {% for rating in ratings %}
+                            <option value="{{ rating.rating }}">{{ rating.rating }}</option>
+                            {% endfor %}
                         </select>
-                    <label>Film Rating</label>
+                    <label for="movie_rating">Film Rating</label>
                 </div>
+            </div>
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button class="btn waves-effect purple lighten-2 enter-alignment" type="submit">Submit
+                        <i class="material-icons right"></i>
+                    </button>
+                </div>
+
             </div>
         </form>
     </div>

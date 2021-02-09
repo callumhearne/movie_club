@@ -2,18 +2,18 @@
 {% block content %}
 
 
-
+    <h3 class="purple-text lighten-2 center">Film Reviews</h3>
 
     <ul class="collapsible">
-        {% for task in reviews %}
+        {% for review in reviews %}
         <li>
             <div class="collapsible-header white-text purple darken-1">
-                <i class="fas fa-arrows-alt-v"></i><strong>{{ task.movie_name }}</strong>
+                <i class="fas fa-arrows-alt-v"></i><strong>{{ review.movie_name }} Written by : {{ review.created_by }}</strong>
             </div>
             <div class="collapsible-body">
-                <p>Genre : {{ task.genre_name }}</p>
-                <p>Review : {{ task.movie_review }}</p>
-                <p>Rating : {{ task.movie_rating }}/5</p>
+                <strong>Genre : </strong><p>{{ review.genre_name }}</p>
+                <strong>Review : </strong><p>{{ review.movie_review }}</p>
+                <strong>Rating : </strong><p>{{ review.movie_rating }}</p>
             </div>
         </li>
         {% endfor %}

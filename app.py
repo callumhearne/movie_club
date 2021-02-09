@@ -109,10 +109,30 @@ def add_review():
         mongo.db.reviews.insert_one(reviews)
         flash("Review Successfully Created")
         return redirect(url_for("get_reviews"))
+
     genres = mongo.db.genres.find().sort("genre_name", 1)
     ratings = mongo.db.ratings.find().sort("rating")
     return render_template("add_review.html", genres=genres,
         ratings=ratings)
+
+
+@app.route("/edit_review/<review_id>", methods=["GET", "POST"])
+def edit_review(review_id):
+    if request.method == "POST":
+        reviews = {
+            "movie_name": request.form.get("movie_name"),
+            "genre_name": request.form.get("genre_name"),
+            "movie_review": request.form.get("movie_review"),
+            "movie_rating": request.form.get("movie_rating"),
+            "created_by": session["user"]
+        }
+        mongo.db.reviews.update({"_id": ObjectId(review_id)}, reviews)
+        flash("Review Successfully Updated")
+        
+    review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
+    movie_name = mongo.db.reviews.find().sort("movie_name", 1)
+    return render_template("edit_review.html", review=review,
+        movie_name=movie_name)
 
 
 if __name__ == "__main__":

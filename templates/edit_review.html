@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="purple-text lighten-2 center">Create Review</h3>
+    <h3 class="purple-text lighten-2 center">Edit Review</h3>
 
     <div class="row card-panel col s12">
-        <form class="col s12" method="POST" action="{{ url_for('add_review') }}">
+        <form class="col s12" method="POST" action="{{ url_for('edit_review', review_id=review._id) }}">
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-film prefix purple-text lighten-2"></i>
-                    <input id="movie_name" name="movie_name" type="text" class="validate" required>
+                    <input id="movie_name" name="movie_name" type="text" value=" {{ review.movie_name  }}" class="validate" required>
                     <label for="movie_name">Film Name</label>
                 </div>
             </div>
@@ -16,9 +16,13 @@
                 <div class="input-field col s12 center-alignment">
                     <i class="fas fa-sort-amount-down-alt prefix purple-text lighten-2"></i>
                         <select id="genre_name" name="genre_name" class="validate" required>
-                            <option value="" disabled selected>Choose Genre</option>
+                            <option value="" disabled>Choose Genre</option>
                             {% for genre in genres %}
-                            <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
+                                {% if genre.genre_name == review.genre_name %}
+                                    <option value="{{ genre.genre_name }}" selected>{{ genre.genre_name }}</option>
+                                {% else %}
+                                    <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
+                                {% endif %}
                             {% endfor %}
                         </select>
                     <label for="genre_name">Film Genre</label>
@@ -27,8 +31,8 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-edit prefix purple-text lighten-2"></i>
-                    <textarea id="movie_review" name="movie_review" minlength="5"
-                        maxlength="500" class="materialize-textarea validate" required></textarea>
+                    <textarea id="movie_review" name="movie_review" minlength="5" 
+                        maxlength="500" value=" {{ review.movie_review  }}" class="materialize-textarea validate" required></textarea>
                     <label for="movie_review">Enter review here!</label>
                 </div>
             </div>
@@ -38,7 +42,11 @@
                          <select id="movie_rating" name="movie_rating" class="validate" required>
                             <option value="" disabled selected>Choose your Rating</option>
                             {% for rating in ratings %}
-                            <option value="{{ rating.rating }}">{{ rating.rating }}</option>
+                                {% if rating.rating == review.movie.rating %}
+                                    <option value="{{ rating.rating }}" selected>{{ rating.rating }}</option>
+                                {% else %}
+                                    <option value="{{ rating.rating }}" >{{ rating.rating }}</option>
+                                {% endif %}
                             {% endfor %}
                         </select>
                     <label for="movie_rating">Film Rating</label>
@@ -46,7 +54,7 @@
             </div>
             <div class="row">
                 <div class="col s12 center-align">
-                    <button class="btn waves-effect purple lighten-2 center-alignment" type="submit">Submit
+                    <button class="btn waves-effect purple lighten-2 center-alignment" type="submit">Edit Review
                         <i class="material-icons right"></i>
                     </button>
                 </div>

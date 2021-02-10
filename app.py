@@ -130,9 +130,18 @@ def edit_review(review_id):
         flash("Review Successfully Updated")
         
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
-    movie_name = mongo.db.reviews.find().sort("movie_name", 1)
-    return render_template("edit_review.html", review=review,
-        movie_name=movie_name)
+
+    genres = mongo.db.genres.find().sort("genre_name", 1)
+    ratings = mongo.db.ratings.find().sort("rating")
+    return render_template("edit_review.html", review=review, genres=genres,
+        ratings=ratings)
+
+
+@app.route("/delete_review/<review_id>")
+def delete_review(review_id):
+    mongo.db.reviews.remove({"_id": ObjectId(review_id)})
+    flash("Task Successfully Deleted")
+    return redirect(url_for("get_reviews"))
 
 
 if __name__ == "__main__":

@@ -31,8 +31,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-edit prefix purple-text lighten-2"></i>
-                    <textarea id="movie_review" name="movie_review" minlength="5" 
-                        maxlength="500" value=" {{ review.movie_review  }}" class="materialize-textarea validate" required></textarea>
+                    <input id="movie_review" name="movie_review" type="text" value=" {{ review.movie_review  }}" class="validate" required>
                     <label for="movie_review">Enter review here!</label>
                 </div>
             </div>
@@ -42,7 +41,7 @@
                          <select id="movie_rating" name="movie_rating" class="validate" required>
                             <option value="" disabled selected>Choose your Rating</option>
                             {% for rating in ratings %}
-                                {% if rating.rating == review.movie.rating %}
+                                {% if rating.rating == review.movie_rating %}
                                     <option value="{{ rating.rating }}" selected>{{ rating.rating }}</option>
                                 {% else %}
                                     <option value="{{ rating.rating }}" >{{ rating.rating }}</option>

@@ -42,8 +42,20 @@ Here is the link to my live website :
 
 2. Scope plane : Now that I had planned what I was going to do with my website, I then needed to plan what sort of features I wanted to add to the website. For the reviews I decided to make clear buttons to edit and delete my reviews. I also made a search function so that I was able to search through the reviews. I made a page to manage the genres so that I was able to create and remove genres for the films. I also added an a profile page so that I could see my reviews.
 
-3. Structure plane : For the structure of the website my first made it so that the user will encounter the login and register page before going into the rest of the site. From there the user will be able to access the reviews and there profile.
+3. Structure plane : For the structure of the website my first made it so that the user will encounter review page, the login and register pages before going into the rest of the site. From there the user will be able to access the reviews and there profile when they have made an account. Admin will be able to access the genre management pages too.
 
-4. Skelton plane :
+4. Skelton plane : To navigate the Film Club website there will be a simple navigatation bar at the top right corner of the page on every page. I thought this was best as it meant it was easy to navigate through the website with no issues and is very clear.
 
-5. Surface plane :
+5. Surface plane : For the look of the website I decided on a simple theme of white and purple being faded. I did not want the colours to take away from the website as the main reason for the website was to present information and at the same time I didn't want the website to look to bland.
+
+Now that I had planned all of this and had a good picture in my head of what I wanted to do I went on the figma to start designing my website.
+
+# Wireframing my project on Figma 
+
+To make sure that I fully understood what me website was going to look like before creating the website I created my layout on Figma. This give me an idea on what I was going to do and what tools I would be using.
+
+Link to my Figma
+https://www.figma.com/file/u0ouO3CFuPqyFSy1H8bnW3/Movie-Review-Website?node-id=0%3A1
+
+# Features
+

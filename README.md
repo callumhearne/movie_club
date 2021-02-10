@@ -1,45 +1,49 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Film Club
 
-Welcome callumhearne,
+![image of my website](https://github.com/callumhearne/movie_club/blob/master/Capture.JPG)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+Film Club is a website where my friends and I are able to review films and give our personal opinions on them.
 
-## Gitpod Reminders
+The idea to create the film club website came from my dad. He does a film club of his own with his friends where they go to see films and talk about them in their whatsapp group. I thought it would be better and easier to make a website that displayed the reviews better and more clear while also being more accessible.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+This is my third of four milestone projects that make up my Full Stack Web Development course at THE CODE INSTITUTE. The main requirements are to make a responsive website with HTML5, CSS3, Java Script, Python, Flask and MongoDB.
 
-`python3 -m http.server`
+Here is the link to my live website : 
 
-A blue button should appear to click: *Make Public*,
+# UX
 
-Another blue button should appear to click: *Open Browser*.
+## Main aims
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- To provide a easier experience for the users to submit reviews on films they have watched.
+- To allow users to be able to browse through reviews easily and efficiently.
+- To create a responsive website that can be used on tablets and phones.
+- To create a website that can be navigated easily and not being difficult to use so that the user is not frustrated.
+- To create a website that has a consistent menu and theme that is very clear at getting all of the information across.
 
-A blue button should appear to click: *Make Public*,
+# User Stories
 
-Another blue button should appear to click: *Open Browser*.
+## New Users
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- I am a new user who wanted to be able to post my film reviews and see if I had similar thoughts on films as others did.
+- I am a new user who was looking at other websites to see reviews on with a good search engine to be able to see reviews quick and easy.
 
-## Updates Since The Instructional Video
+## Returning User
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- I am a returning user who wants to be able to edit their reviews and chnage scores on repeat viewings of the film.
+- I am a returning user who wants to be able to delete their reviews if the review feels outdated.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Tablet User
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+- I am a tablet user and I was able to use the website fine on my tablet.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+# Design Procces
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+1. Strategy plane : When planning on what I wanted my film club website, I wanted to make a website that was easy to navigate and clear and representing the information that the website was presenting. I didn't want the website to be complicated and be user friendly. I asked a few friends and family one what would be a suitable display and theme to meet these goals.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+2. Scope plane : Now that I had planned what I was going to do with my website, I then needed to plan what sort of features I wanted to add to the website. For the reviews I decided to make clear buttons to edit and delete my reviews. I also made a search function so that I was able to search through the reviews. I made a page to manage the genres so that I was able to create and remove genres for the films. I also added an a profile page so that I could see my reviews.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+3. Structure plane : For the structure of the website my first made it so that the user will encounter the login and register page before going into the rest of the site. From there the user will be able to access the reviews and there profile.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+4. Skelton plane :
 
---------
-
-Happy coding!
+5. Surface plane :

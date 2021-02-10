@@ -29,15 +29,16 @@
                 <div class="row">
                     <div class="input-field col s12">
 						<i class="fas fa-envelope prefix purple-text lighten-2"></i>
-                        <input id="email" name="email" type="text" required>
-                        <label for="email">Email Address</label>
+                        <input id="emailaddress" name="emailaddress" type="text" required>
+                        <label for="emailaddress">Email Address</label>
                     </div>
                 </div>
                 <!-- register -->
                 <div class="row">
-                    <button type="submit" class="col s12 btn-large purple lighten-2 text-shadow">
-                        Register <i class="fas fa-sign-in-alt"></i>
-                    </button>
+                <form onsubmit="return sendMail(this);"></form>    
+                        <button type="submit" class="col s12 btn-large purple lighten-2 text-shadow">
+                            Register <i class="fas fa-sign-in-alt"></i>
+                        </button>
                 </div>
             </div>
         </form>

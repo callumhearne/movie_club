@@ -12,3 +12,26 @@
     margin: 5px;
     line-height: 42px;
 }
+
+.fa-arrows-alt-v{
+    margin-top: 25px;
+}
+
+nav .brand-logo {
+    padding-left: 10px;
+}
+
+.edit {
+    margin-left: 12px;
+    margin-bottom: 5px;
+}
+
+.topbutton {
+    padding-bottom: 10px;
+    padding-right: 15px;
+
+}
+
+.reset {
+    margin-bottom: 5px;
+}

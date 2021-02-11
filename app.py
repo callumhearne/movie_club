@@ -47,6 +47,7 @@ def register():
         # add the user to a session
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
+
     return render_template("register.html")
 
 
@@ -81,9 +82,11 @@ def profile(username):
     # gets the user's name
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
+    review = mongo.db.reviews.find_one({"created_by": session["user"]})
 
     if session["user"]:
-        return render_template("profile.html", username=username)
+        return render_template("profile.html", username=username,
+        review=review)
 
     return redirect(url_for("login.html"))
 

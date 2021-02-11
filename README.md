@@ -59,3 +59,82 @@ https://www.figma.com/file/u0ouO3CFuPqyFSy1H8bnW3/Movie-Review-Website?node-id=0
 
 # Features
 
+This website will include 5 pages that a normal user will have access to and 1 page that only the admins will have access to.
+
+## Log in page
+
+- Page will have a username input box.
+- Page will have a password input box.
+- Page will have a login button.
+
+## Registration page
+
+- Page will have a username input box.
+- Page will have a password input box. 
+- Page will have a email address input box.
+- Page will have a register to webiste button.
+- When registering the user will get a confirmation email.
+
+## Review Page 
+
+- This page will start with a search bar so that the user can search for whatever review, genre or author they want.
+- Each review will have a edit and delete button which only the user who created the review will be able to see.
+- Each review is collapsable.
+- There will be a button at the bottom of the page to send the user back to the top of the page.
+
+## Profile page
+
+- The page will start a title showing the users name.
+- Then reviews for the user will show under that.
+
+## Manage genre page
+
+- From this page users will be able to create, edit and delete genres.
+- Each genre will be in card panel form in a sort of grid.
+
+# Technology used
+
+- HTML5
+- CSS3
+- Javascript
+- Materialize
+- Github
+- GitPod
+- Jquery
+- EmailJS
+- MongoDB
+- Heroku
+- Python
+
+## Additional Technology used
+
+- Figma
+
+# Testing
+
+The testing I have done has been documented on a different document. This is the link: 
+
+# Deploying my project
+
+To deploy my app/website I have used Heroku the link for the app is here:
+
+## Deploying to Heroku
+
+To deploy my work on Heroku I did the following:
+
+1.
+2.
+3.
+
+# Credits:
+
+## Content
+
+All of the details and information that were in my website were completely made up for the purpose of the website.
+
+# Acknowlegdements:
+
+Thank you to the following people who helped with support and guidance at different stages in the project:
+
+- The guidance and support of my mentor Seun Owonikoko.
+- The supportive Code Institute community, including my fellow students and the tutor support team.

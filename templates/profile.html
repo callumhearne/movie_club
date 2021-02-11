@@ -10,5 +10,30 @@
             </div>
         </div>
     </div>
+    <ul class="collapsible">
+        {% for review in reviews %}
+        <li>
+            <div class="collapsible-header white-text purple darken-1">
+                <div class="col s3">
+                    <i class="fas fa-arrows-alt-v "></i>
+                </div>
+                <div class="col s3">
+                    <a href="{{ url_for('edit_review', review_id=review._id) }}" class="waves-effect purple lighten-2 btn-small center edit">Edit</a><br>
+                    <a href="{{ url_for('delete_review', review_id=review._id) }}" class="waves-effect purple lighten-2 btn-small center">Delete</a>
+                </div>
+                <div class="col s6">
+                    <strong>{{ review.movie_name }}</strong><br>
+                    <strong>Written by : {{ review.created_by }}</strong>
+                </div>
+            </div>
+            <div class="collapsible-body">
+                <strong>Genre : </strong><p>{{ review.genre_name }}</p>
+                <strong>Review : </strong><p>{{ review.movie_review }}</p>
+                <strong>Rating : </strong><p>{{ review.movie_rating }}</p>
+            </div>
+        </li>
+        
+        {% endfor %}
+    </ul>
 
 {% endblock %}

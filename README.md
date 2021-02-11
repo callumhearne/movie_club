@@ -95,20 +95,32 @@ This website will include 5 pages that a normal user will have access to and 1 p
 # Technology used
 
 - HTML5
+    - HTML5 was used to create and add the content to my website.
 - CSS3
+    - CSS3 was used to style all of the content in my website to match what I had designed on Figma beforehand.
 - Javascript
+    - Javascript was used to create anmiations for my reviews and dropdown boxes as well as make the EmailJS work.
 - Materialize
+    - Materialize was the framework I used to format and create the navbar as well as the card panels and general formating of pages.
 - Github
+    - Github was used to organsie and store my files so that they are accessible.
 - GitPod
+    - GitPod is the workspace I used.
 - Jquery
+    - Jquery was used to help make the Javascript statements.
 - EmailJS
+    - EmailJS was used to make automated emails when registering.
 - MongoDB
+    - MongoDB has is being used to store all of the data.
 - Heroku
-- Python
+    - Heroku is being used to run the webiste.
+- Python3
+    - Python3 is being used to commuicate between Heroku and MongoDB to present the data.
 
 ## Additional Technology used
 
 - Figma
+    - Figma was used to design the website.
 
 # Testing
 
@@ -122,9 +134,11 @@ To deploy my app/website I have used Heroku the link for the app is here:
 
 To deploy my work on Heroku I did the following:
 
-1.
-2.
-3.
+1. I first went on Heroku and created a new app, named it and selected the region. 
+2. I then clicked on the Github connect option in the deploy tab.
+3. I searched for my repositories and select the correct one and press connect.
+4. I then went down to 'Deploy a GitHub branch' selected the master branch.
+5. Then selected 'Deploy branch'.
 
 # Credits:
 

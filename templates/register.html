@@ -1,11 +1,19 @@
   
 {% extends "base.html" %}
 {% block content %}
-
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_ZsGfUJOV66pQ3SLKKXSM0");
+         })();
+    </script>
+    
     <h3 class="center-align">Register</h3>
 
     <div class="row">
-        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+        <form id="registerform" class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
             <div class="card-panel">
                 <!-- username -->
                 <div class="row">
@@ -34,11 +42,10 @@
                     </div>
                 </div>
                 <!-- register -->
-                <div class="row">
-                <form onsubmit="return sendMail(this);"></form>    
-                        <button type="submit" class="col s12 btn-large purple lighten-2 text-shadow">
-                            Register <i class="fas fa-sign-in-alt"></i>
-                        </button>
+                <div class="row">   
+                    <button type="submit" class="col s12 btn-large purple lighten-2 text-shadow">
+                        Register <i class="fas fa-sign-in-alt"></i>
+                    </button>
                 </div>
             </div>
         </form>
@@ -53,4 +60,6 @@
         </div>
     </div>
 
+    
+    <script src="{{ url_for('static', filename='js/sendEmail.js') }}"></script>
 {% endblock %}

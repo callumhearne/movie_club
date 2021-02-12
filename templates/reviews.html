@@ -29,7 +29,7 @@
                     <i class="fas fa-arrows-alt-v "></i>
                 </div>
                 <div class="col s3">
-                    {% if session.user == "created_by" %}
+                    {% if session.user == review.created_by %}
                     <a href="{{ url_for('edit_review', review_id=review._id) }}" class="waves-effect purple lighten-2 btn-small center edit">Edit</a><br>
                     <a href="{{ url_for('delete_review', review_id=review._id) }}" class="waves-effect purple lighten-2 btn-small center">Delete</a>
                     {% endif %}

@@ -1,15 +1,15 @@
 const registerform = document.querySelector("#registerform");
 
 function logSubmit(event) {
-    event.preventDefault();
+    //event.preventDefault();
 
     emailjs.send("gmail", "film_club", {
         "from_name": registerform.username.value,
         "from_email": registerform.emailaddress.value
     })
 
-    registerform.submit();
-    registerform.requestFullscreen();
+    //registerform.submit();
+    //registerform.requestFullscreen();
 
 }
 

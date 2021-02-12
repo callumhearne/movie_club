@@ -47,6 +47,7 @@ def register():
         # add the user to a session
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
+        return render_template("profile.html")
 
     return render_template("register.html")
 
@@ -64,6 +65,7 @@ def login():
                 existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(request.form.get("username")))
+                return render_template("profile.html")
             else:
                 # password is wrong
                 flash("Incorrect Username and/or Password")

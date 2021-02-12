@@ -24,12 +24,12 @@ Here is the link to my live website :
 
 ## New Users
 
-- I am a new user who wanted to be able to post my film reviews and see if I had similar thoughts on films as others did.
+- I am a new user who wanted to be able to post my film reviews and see if they had similar thoughts on films as others did.
 - I am a new user who was looking at other websites to see reviews on with a good search engine to be able to see reviews quick and easy.
 
 ## Returning User
 
-- I am a returning user who wants to be able to edit their reviews and chnage scores on repeat viewings of the film.
+- I am a returning user who wants to be able to edit their reviews and change scores on repeat viewings of the film.
 - I am a returning user who wants to be able to delete their reviews if the review feels outdated.
 
 ## Tablet User

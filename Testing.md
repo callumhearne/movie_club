@@ -58,8 +58,25 @@ CSS
 To validate my code I used: https://jigsaw.w3.org/css-validator/
 
 style.css errors:
-
+- No errors found.
 
 JavaScript
 
 To validate my code I used: https://jshint.com/
+
+- No errors found.
+
+Manual Testing
+
+- I went through each of the buttons in the task bar from each page to make sure they worked.
+- To test the site bar I made sure to go through each page using all the buttons from each page.
+- For the editing buttons on the reviews I made sure to edit them so that I could see that the edit button worked correctly.
+- I added and deleted revuews to test that the button worked. I checked the database to see that they were actually deleted.
+- I created numerious reviews using the create review page to make sure the functionality worked correctly and checked that they got added to the database.
+- I registered multiple users using the registration page to test that the register page worked correctly and sent the emails correctly.
+- I logged in and out multiple times with different users to make sure that the log in screen worked.
+- I tried to log in with incorrect user details to make sure that the python checked to see if the user exsisted and had the correct password.
+- I have tried to register with usernames that have already been take to make sure that I can't make users with the same username.
+
+ 
+

@@ -5,10 +5,20 @@
         src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
     </script>
     <script type="text/javascript">
-        (function(){
+        (function() {
             emailjs.init("user_ZsGfUJOV66pQ3SLKKXSM0");
-         })();
+    })();
     </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('registerform').addEventListener('submit', async function(event) {
+                event.preventDefault();
+                await emailjs.sendForm('gmail', 'film_club', this);
+                this.submit();
+            });
+        }
+    </script>
+
     
     <h3 class="center-align">Register</h3>
 

@@ -124,7 +124,7 @@ This website will include 5 pages that a normal user will have access to and 1 p
 
 # Testing
 
-The testing I have done has been documented on a different document. This is the link: 
+The testing I have done has been documented on a different document. This is the link: https://github.com/callumhearne/movie_club/blob/master/Testing.md
 
 # Deploying my project
 

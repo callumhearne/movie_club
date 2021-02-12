@@ -1,16 +1,17 @@
-const registerform = document.querySelector("#registerform");
+//const registerform = document.querySelector("#registerform");
 
-function logSubmit(event) {
+//function logSubmit(event) {
     //event.preventDefault();
 
-    emailjs.send("gmail", "film_club", {
-        "from_name": registerform.username.value,
-        "from_email": registerform.emailaddress.value
-    })
+
+    //emailjs.send("gmail", "film_club", {
+        //"from_name": registerform.username.value,
+        //"from_email": registerform.emailaddress.value
+   // })
 
     //registerform.submit();
     //registerform.requestFullscreen();
 
-}
+//}
 
-registerform.addEventListener('submit', logSubmit);
+//registerform.addEventListener('submit', logSubmit);

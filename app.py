@@ -27,6 +27,12 @@ def get_reviews():
     return render_template("reviews.html", reviews=reviews)
 
 
+@app.route("/get_profile_reviews")
+def get_profile_reviews():
+    reviews = mongo.db.reviews.find()
+    return render_template("profile.html", review=reviews)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -44,10 +50,10 @@ def register():
         }
         mongo.db.users.insert_one(register)
 
-        # add the user to a session
+        # add the user to a session and redirect to profile page
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
-        return render_template("profile.html")
+        return redirect(url_for("profile", username=session["user"]))
 
     return render_template("register.html")
 
@@ -65,7 +71,7 @@ def login():
                 existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(request.form.get("username")))
-                return render_template("profile.html")
+                return redirect(url_for("profile", username=session["user"]))
             else:
                 # password is wrong
                 flash("Incorrect Username and/or Password")
@@ -84,13 +90,16 @@ def profile(username):
     # gets the user's name
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    review = mongo.db.reviews.find_one({"created_by": session["user"]})
+    review = mongo.db.reviews.find({"created_by": session["user"]})
 
     if session["user"]:
         return render_template("profile.html", username=username,
         review=review)
 
     return redirect(url_for("login.html"))
+
+
+
 
 
 @app.route("/logout")
@@ -103,6 +112,7 @@ def logout():
 
 @app.route("/add_review", methods=["GET", "POST"])
 def add_review():
+    # push the review info to the database
     if request.method == "POST":
         reviews = {
             "movie_name": request.form.get("movie_name"),
@@ -123,6 +133,7 @@ def add_review():
 
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
+    # push the review info to the database and change the original info
     if request.method == "POST":
         reviews = {
             "movie_name": request.form.get("movie_name"),
@@ -144,6 +155,7 @@ def edit_review(review_id):
 
 @app.route("/delete_review/<review_id>")
 def delete_review(review_id):
+    # deletes the reviews
     mongo.db.reviews.remove({"_id": ObjectId(review_id)})
     flash("Task Successfully Deleted")
     return redirect(url_for("get_reviews"))
@@ -151,14 +163,15 @@ def delete_review(review_id):
 
 @app.route("/get_genres")
 def get_genres():
+    # finds the genres to display
     genres = list(mongo.db.genres.find().sort("genre_name", 1))
     return render_template("genres.html", genres=genres)
 
 
 @app.route("/genre", methods=["GET", "POST"])
 def add_genre():
+    # pushes the genre info to the database
     if request.method == "POST":
-
         existing_genre = mongo.db.genres.find_one(
             {"genre_name": request.form.get("genre_name").lower()})
 

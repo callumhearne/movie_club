@@ -4,11 +4,14 @@
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
     </script>
+    <!-- email id-->
     <script type="text/javascript">
         (function() {
             emailjs.init("user_ZsGfUJOV66pQ3SLKKXSM0");
     })();
+    
     </script>
+    <!-- email function to send the email before the page is redirecting cancelling out the email function -->
     <script type="text/javascript">
         window.onload = function() {
             document.getElementById('registerform').addEventListener('submit', async function(event) {
@@ -64,6 +67,7 @@
     <div class="row">
         <div class="col s12">
             <p class="center-align">
+                <!-- link to log in -->
                 Already have an Account?
                 <a href="{{ url_for('login') }}" >Log In</a>
             </p>

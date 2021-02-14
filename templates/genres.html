@@ -5,6 +5,7 @@
 
     <div class="row">
         <div class="col s12 center-align">
+            <!-- button to add genre  -->
             <a href="{{ url_for('add_genre') }}" class="btn-large waves-effect purple lighten-2">
                 Add New Genre
             </a>
@@ -16,9 +17,11 @@
             <div class="col s12 m3">
                 <div class="card  white-text purple darken-1 center-align">
                     <div class="card-content white-text">
+                        <!-- shows all the genres  -->
                         <span class="card-title">{{ genre.genre_name }}</span>
                     </div>
                     <div class="card-action">
+                        <!-- buttons to edit and delete genres  -->
                         <a href="{{ url_for('edit_genre', genre_id=genre._id) }}" class="waves-effect purple lighten-2 btn-small">Edit</a>
                         <a href="{{ url_for('delete_genre', genre_id=genre._id) }}" class="waves-effect purple lighten-2 btn-small">Delete</a>
                     </div>

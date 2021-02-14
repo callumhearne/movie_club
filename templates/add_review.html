@@ -4,6 +4,7 @@
     <h3 class="purple-text lighten-2 center">Create Review</h3>
 
     <div class="row card-panel col s12">
+        <!-- when the form is submitted the data will be post to db -->
         <form class="col s12" method="POST" action="{{ url_for('add_review') }}">
             <div class="row">
                 <div class="input-field col s12">
@@ -17,6 +18,7 @@
                     <i class="fas fa-sort-amount-down-alt prefix purple-text lighten-2"></i>
                         <select id="genre_name" name="genre_name" class="validate" required>
                             <option value="" disabled selected>Choose Genre</option>
+                            <!-- gets the genres for the dropdown box  -->
                             {% for genre in genres %}
                             <option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
                             {% endfor %}
@@ -37,6 +39,7 @@
                     <i class="fas fa-star prefix purple-text lighten-2"></i>
                          <select id="movie_rating" name="movie_rating" class="validate" required>
                             <option value="" disabled selected>Choose your Rating</option>
+                            <!-- gets the ratings for the dropdown box  -->
                             {% for rating in ratings %}
                             <option value="{{ rating.rating }}">{{ rating.rating }}</option>
                             {% endfor %}
@@ -46,6 +49,7 @@
             </div>
             <div class="row">
                 <div class="col s12 center-align">
+                    <!-- submit button  -->
                     <button class="btn waves-effect purple lighten-2 center-alignment" type="submit">Submit
                         <i class="material-icons right"></i>
                     </button>

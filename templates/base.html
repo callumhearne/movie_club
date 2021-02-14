@@ -23,14 +23,17 @@
             <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-expand"></i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('get_reviews') }}">Reviews</a></li>
-            {% if session.user %}
+            {% if session.user %}#
+            <!-- if user in session show these buttons  -->
                 <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                 <li><a href="{{ url_for('add_review') }}">Submit Review</a></li>
                 {% if session.user|lower == "admin"|lower %}
+                <!-- if an admin is in session show this  -->
                     <li><a href="{{ url_for('get_genres') }}">Manage Genres</a></li>
                 {% endif %}
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
+            <!-- if no one is logged in show this  -->
                 <li><a href="{{ url_for('login') }}">Log In</a></li>
                 <li><a href="{{ url_for('register') }}">Register</a></li>
             {% endif %}
@@ -40,6 +43,7 @@
 
         <ul class="sidenav" id="mobile-demo">
                 <li><h4 class="center-align purple-text">Movie Club</h4></li>
+                <!-- side bar same validation applies from the main nav bar  -->
                 <li><a href="{{ url_for('get_reviews') }}">Reviews</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>

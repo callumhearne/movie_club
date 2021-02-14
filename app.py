@@ -23,12 +23,14 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_reviews")
 def get_reviews():
+    # gets all the reviews
     reviews = mongo.db.reviews.find()
     return render_template("reviews.html", reviews=reviews)
 
 
 @app.route("/get_profile_reviews")
 def get_profile_reviews():
+    # gets the current users reviews
     reviews = mongo.db.reviews.find()
     return render_template("profile.html", review=reviews)
 
@@ -170,7 +172,7 @@ def get_genres():
 
 @app.route("/genre", methods=["GET", "POST"])
 def add_genre():
-    # pushes the genre info to the database
+    # pushs the genre info to the database
     if request.method == "POST":
         existing_genre = mongo.db.genres.find_one(
             {"genre_name": request.form.get("genre_name").lower()})
@@ -191,6 +193,7 @@ def add_genre():
 
 @app.route("/edit_genre/<genre_id>", methods=["GET", "POST"])
 def edit_genre(genre_id):
+    # gets the current genre and then updates the record
     if request.method == "POST":
         submit = {
             "genre_name": request.form.get("genre_name")
@@ -205,6 +208,7 @@ def edit_genre(genre_id):
 
 @app.route("/delete_genre/<genre_id>")
 def delete_genre(genre_id):
+    # fucntion to delete genres
     mongo.db.genres.remove({"_id": ObjectId(genre_id)})
     flash("Genre Successfully Deleted")
     return redirect(url_for("get_genres"))
@@ -212,6 +216,7 @@ def delete_genre(genre_id):
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    # search function for the user to search reviews
     query = request.form.get("query")
     reviews = list(mongo.db.reviews.find({"$text": {"$search": query}}))
     return render_template("reviews.html", reviews=reviews)
@@ -221,4 +226,4 @@ def search():
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            )

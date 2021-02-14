@@ -18,16 +18,18 @@
                     <i class="fas fa-arrows-alt-v "></i>
                 </div>
                 <div class="col s3">
-
+                    <!-- edit andf delete buttons -->
                     <a href="{{ url_for('edit_review', review_id=review._id) }}" class="waves-effect purple lighten-2 btn-small center edit">Edit</a><br>
                     <a href="{{ url_for('delete_review', review_id=review._id) }}" class="waves-effect purple lighten-2 btn-small center">Delete</a>
                 </div>
                 <div class="col s6">
+                    <!-- movie name and user who created review -->
                     <strong>{{ review.movie_name }}</strong><br>
                     <strong>Written by : {{ review.created_by }}</strong>
                 </div>
             </div>
             <div class="collapsible-body">
+                <!-- shows the genre, film rating and the actual review -->
                 <strong>Genre : </strong><p>{{ review.genre_name }}</p>
                 <strong>Review : </strong><p>{{ review.movie_review }}</p>
                 <strong>Rating : </strong><p>{{ review.movie_rating }}</p>

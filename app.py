@@ -70,7 +70,7 @@ def login():
         if existing_user:
             # ensure it is the correct password
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
+               existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(request.form.get("username")))
                 return redirect(url_for("profile", username=session["user"]))
@@ -96,12 +96,8 @@ def profile(username):
 
     if session["user"]:
         return render_template("profile.html", username=username,
-        review=review)
-
+                               review=review)
     return redirect(url_for("login.html"))
-
-
-
 
 
 @app.route("/logout")
@@ -130,7 +126,7 @@ def add_review():
     genres = mongo.db.genres.find().sort("genre_name", 1)
     ratings = mongo.db.ratings.find().sort("rating")
     return render_template("add_review.html", genres=genres,
-            ratings=ratings)
+                           ratings=ratings)
 
 
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
@@ -152,7 +148,7 @@ def edit_review(review_id):
     genres = mongo.db.genres.find().sort("genre_name", 1)
     ratings = mongo.db.ratings.find().sort("rating")
     return render_template("edit_review.html", review=review, genres=genres,
-        ratings=ratings)
+                           ratings=ratings)
 
 
 @app.route("/delete_review/<review_id>")
@@ -222,8 +218,9 @@ def search():
     return render_template("reviews.html", reviews=reviews)
 
 
-
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             )
+
+env

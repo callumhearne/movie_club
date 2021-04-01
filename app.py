@@ -29,6 +29,12 @@ def get_reviews():
     return render_template("reviews.html", reviews=reviews)
 
 
+@app.route("/get_films")
+def get_films():
+    reviews = mongo.db.reviews.find()
+    return render_template("films.html", reviews=reviews)
+
+
 @app.route("/get_profile_reviews")
 def get_profile_reviews():
     # gets the current users reviews

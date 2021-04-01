@@ -25,6 +25,7 @@ mongo = PyMongo(app)
 def get_reviews():
     # gets all the reviews
     reviews = mongo.db.reviews.find()
+    flash("Welcome to Film Club!")
     return render_template("reviews.html", reviews=reviews)
 
 
@@ -221,6 +222,6 @@ def search():
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            )
+            debug=True)
 
 env

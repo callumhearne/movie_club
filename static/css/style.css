@@ -36,3 +36,9 @@ nav .brand-logo {
 .reset {
     margin-bottom: 5px;
 }
+
+.intro {
+
+    font-size: 15px;
+    color: darkgrey;
+}

@@ -3,6 +3,18 @@
 
 
     <h3 class="purple-text lighten-2 center">Film Reviews</h3>
+    {% if session.user == null %}
+    <div class="row card-panel grey lighten-5">
+        <!-- search engine -->
+        <form class="col s12">
+            <div class="row center-align">
+                <div class="col s12 darkgrey-text">
+                    <p>Welcome to the Film Club review website. We are a small commuity of Reviews who share a passion for films. All our reviews are accessible by the public. However, please Register/Sign in to create and edit your own reviews!</p>
+                </div>
+            </div>
+        </form>
+    </div>
+    {% endif %}
 
     <div class="row card-panel grey lighten-5">
         <!-- search engine -->

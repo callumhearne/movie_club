@@ -29,9 +29,9 @@ def get_reviews():
     return render_template("reviews.html", reviews=reviews)
 
 
-@app.route("/get_films")
-def get_films():
-    reviews = mongo.db.reviews.find()
+@app.route("/get_films/<movie_name>")
+def get_films(movie_name):
+    reviews = mongo.db.reviews.find({"movie_name": movie_name})
     return render_template("films.html", reviews=reviews)
 
 

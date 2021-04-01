@@ -47,7 +47,7 @@
                     <strong>{{ review.movie_name }}</strong><br>
                 </div>
                 <div class="col s3">
-                    <a href="{{ url_for('get_films') }}" class="waves-effect purple lighten-2 btn-small center">See Reviews</a>
+                    <a href="{{ url_for('get_films', movie_name=review.movie_name) }}" class="waves-effect purple lighten-2 btn-small center">See Reviews</a>
                 </div>
             </div>
         </li>

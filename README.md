@@ -8,7 +8,7 @@ The idea to create the film club website came from my dad. He does a film club o
 
 This is my third of four milestone projects that make up my Full Stack Web Development course at THE CODE INSTITUTE. The main requirements are to make a responsive website with HTML5, CSS3, Java Script, Python, Flask and MongoDB.
 
-Here is the link to my live website : 
+Here is the link to my live website : https://cal-movie-reviews.herokuapp.com/
 
 # UX
 
@@ -128,7 +128,7 @@ The testing I have done has been documented on a different document. This is the
 
 # Deploying my project
 
-To deploy my app/website I have used Heroku the link for the app is here:
+To deploy my app/website I have used Heroku the link for the app is here: https://cal-movie-reviews.herokuapp.com/
 
 ## Deploying to Heroku
 

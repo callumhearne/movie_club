@@ -3,6 +3,10 @@
 
 
     <h3 class="purple-text lighten-2 center">Film Reviews</h3>
+    <section>
+        <div class="container-fluid jumbotron-1">
+        </div>
+    </section>
    {% if session.user == null %} 
     <div class="row card-panel grey lighten-5">
         <!-- search engine -->
@@ -37,6 +41,22 @@
                 </div>
             </div>
         </form>
+        <form action="{{ url_for('search') }}" method="post" class="col s12">
+            <div class="row valign-wrapper center-align">
+                <div class="input-field col s12 m8">
+                    <i class=" light-blue-text text-darken-4"></i>
+                    <input type="text" name="query" id="query_genre" class="validate" required>
+                    <label for="query">Search Genres</label>
+                </div>
+                <div class="col s12 m4">
+                    <!-- reset and search buttons -->
+                    <a href="{{ url_for('get_reviews') }}" class="waves-effect purple lighten-2 btn text-shadow reset">Reset</a>
+                    <button type="submit" class="waves-effect purple lighten-2 btn text-shadow reset">
+                        <i class=""></i> Search
+                    </button>
+                </div>
+            </div>
+        </form>
     </div>
     <ul class="collapsible">
         {% for review in reviews %}
@@ -47,13 +67,13 @@
                     <!-- film -->
                     <strong>{{ review.movie_name }}</strong><br>
                 </div>
-                <div class="col s3">
-                    <a href="{{ url_for('get_films', movie_name=review.movie_name) }}" class="waves-effect purple lighten-2 btn-small center">See Reviews</a>
+                <div class="col s6 float-right">
+                    <a href="{{ url_for('get_films', movie_name=review.movie_name) }}" class="waves-effect purple lighten-2 btn-small">See Reviews</a>
                 </div>
             </div>
         </li>
-        
         {% endfor %}
+    </ul>
     <div class=" row col s12 m4 center fixed topbutton">
         <!-- button to take person back to the top go the page -->
         <a href="{{ url_for('get_reviews') }}">Back to top of page</a>

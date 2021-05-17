@@ -42,3 +42,31 @@ nav .brand-logo {
     padding: 10px;
 
 }
+
+.jumbotron-1 {
+    background: url("./images/homepage.jpg") no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    position: relative;
+    width: 100%;
+}
+
+.jumbotron-2 {
+    background: url("./images/review.jpg") no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    position: relative;
+    width: 100%;
+}

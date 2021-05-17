@@ -146,6 +146,11 @@ To deploy my work on Heroku I did the following:
 
 All of the details and information that were in my website were completely made up for the purpose of the website.
 
+## Images:
+
+- Image on the reviews page is from the http://culturalpolitics.net/index/popular_culture/film website.
+- Image on the particle review page is from the https://www.pinterest.co.uk/pin/horror-movies-wallpaper-massive-bhorror-collage-wallpaper--315674255108900397/ website.
+
 # Acknowlegdements:
 
 Thank you to the following people who helped with support and guidance at different stages in the project:

@@ -59,16 +59,17 @@
         </form>
     </div>
     <ul class="collapsible">
-        {% for review in reviews %}
+        {% for movie in movies %}
         <!-- All reviews -->
         <li>
             <div class="reviews collapsible-header white-text purple darken-1">
                 <div class="col s6">
                     <!-- film -->
-                    <strong>{{ review.movie_name }}</strong><br>
+                    <strong>{{ movie }}</strong><br>
+
                 </div>
                 <div class="col s6 float-right">
-                    <a href="{{ url_for('get_films', movie_name=review.movie_name) }}" class="waves-effect purple lighten-2 btn-small">See Reviews</a>
+                    <a href="{{ url_for('get_films', movie_name=movie) }}" class="waves-effect purple lighten-2 btn-small">See Reviews</a>
                 </div>
             </div>
         </li>

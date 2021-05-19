@@ -41,22 +41,6 @@
                 </div>
             </div>
         </form>
-        <form action="{{ url_for('search') }}" method="post" class="col s12">
-            <div class="row valign-wrapper center-align">
-                <div class="input-field col s12 m8">
-                    <i class=" light-blue-text text-darken-4"></i>
-                    <input type="text" name="query" id="query_genre" class="validate" required>
-                    <label for="query">Search Genres</label>
-                </div>
-                <div class="col s12 m4">
-                    <!-- reset and search buttons -->
-                    <a href="{{ url_for('get_reviews') }}" class="waves-effect purple lighten-2 btn text-shadow reset">Reset</a>
-                    <button type="submit" class="waves-effect purple lighten-2 btn text-shadow reset">
-                        <i class=""></i> Search
-                    </button>
-                </div>
-            </div>
-        </form>
     </div>
     <ul class="collapsible">
         {% for movie in movies %}
